@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c62ed88-6a68-4738-b25a-ba25c7b06cd3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Participant/Complete.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Athlete.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cyclist.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Driver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Menu.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Official.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ozlympic.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Participant.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sprinter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Swimmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/superAthlete.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Driver.java" afterPath="$PROJECT_DIR$/src/Driver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Participant/Athlete.java" afterPath="$PROJECT_DIR$/src/Participant/Athlete.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Participant/Cyclist.java" afterPath="$PROJECT_DIR$/src/Participant/Cyclist.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Participant/Sprinter.java" afterPath="$PROJECT_DIR$/src/Participant/Sprinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Participant/Swimmer.java" afterPath="$PROJECT_DIR$/src/Participant/Swimmer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Participant/superAthlete.java" afterPath="$PROJECT_DIR$/src/Participant/superAthlete.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -123,6 +126,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -581,12 +585,20 @@
       <workItem from="1490007297048" duration="1653000" />
       <workItem from="1490611289108" duration="68000" />
       <workItem from="1490611770556" duration="2796000" />
-      <workItem from="1490756117172" duration="1034000" />
+      <workItem from="1490756117172" duration="1613000" />
     </task>
+    <task id="LOCAL-00001" summary="first changes , create some class and variables">
+      <created>1490757207610</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1490757207610</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5551000" />
+    <option name="totallyTimeSpent" value="6130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -606,7 +618,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18058455" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17797495" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -628,6 +640,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first changes , create some class and variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="first changes , create some class and variables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
