@@ -3,5 +3,10 @@ package Participant;
 /**
  * Created by Jodie Lu on 3/20/2017.
  */
-public class Sprinter {
+public class Sprinter implements Complete{
+
+    @Override
+    public void complete() {
+
+    }
 }
