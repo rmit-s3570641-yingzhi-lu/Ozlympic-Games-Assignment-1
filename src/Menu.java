@@ -1,5 +1,3 @@
-package Menu;
-
 import java.util.Scanner;
 
 /**
@@ -21,6 +19,14 @@ public class Menu {
                 " Enter an option:"};
         for (int i = 0; i < menu.length; i++)
             System.out.println(menu[i]);
+    }
+
+    public void showGameSelect(){
+
+        System.out.println("Please select one Ozlympic game to play:");
+        System.out.println("1. Swimming");
+        System.out.println("2. Cycling");
+        System.out.println("3. Running");
     }
 
 
