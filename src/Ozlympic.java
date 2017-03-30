@@ -6,7 +6,9 @@ import Menu.Menu;
 public class Ozlympic {
 
     public static void main(String[] args) {
-       Menu.class.getClass();
-       //run();
+
+    Driver driver =new Driver();
+    driver.run();
+
     }
 }

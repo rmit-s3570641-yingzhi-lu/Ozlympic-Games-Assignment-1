@@ -1,7 +1,5 @@
 package Participants;
 
-import Game.Cycling;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -25,14 +23,14 @@ public class Participant {
         return participantHashMap;
     }
 
-    public static HashMap<String,Participant> participantHashMap = new HashMap<String, Participant>();
+    public static HashMap<String, Participant> participantHashMap = new HashMap<String, Participant>();
 
-    public void add(){
-        participantHashMap.put("123",new Cyclist("123","jack","abc", 0));
+    public void add() {
+        participantHashMap.put("123", new Cyclist("123", "jack", "abc", 0));
 
         Participant par = participantHashMap.get("123");
-        if(par instanceof Cyclist){
-            ;
+        if (par instanceof Cyclist) {
+
         }
     }
 
@@ -44,6 +42,7 @@ public class Participant {
         this.participantID = participantID;
     }
 
+
     public String getParticipantName() {
         return participantName;
     }
@@ -51,6 +50,7 @@ public class Participant {
     public void setParticipantName(String participantName) {
         this.participantName = participantName;
     }
+
 
     public String getParticipantState() {
         return participantState;
@@ -60,13 +60,18 @@ public class Participant {
         this.participantState = participantState;
     }
 
+
     public ArrayList<Participants.Participant> getParticipants() {
         return participants;
     }
 
+
     public void setParticipants(ArrayList<Participants.Participant> participants) {
         this.participants = participants;
     }
+
+
+
 
     public static void setParticipantHashMap(HashMap<String, Participants.Participant> participantHashMap) {
         Participant.participantHashMap = participantHashMap;

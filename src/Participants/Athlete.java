@@ -5,17 +5,18 @@ package Participants;
  */
 public class Athlete extends Participant {
 
+    private double score;
+
+    public Athlete(String participantID, String participantName, String participantState, double score) {
+        super(participantID, participantName, participantState);
+        this.score = score;
+    }
+
     public double getScore() {
         return score;
     }
 
     public void setScore(double score) {
         this.score = score;
-    }
-
-    private double score;
-    public Athlete(String participantID, String participantName, String participantState, double score) {
-        super(participantID, participantName, participantState);
-        this.score=score;
     }
 }
