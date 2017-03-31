@@ -636,7 +636,7 @@
       <workItem from="1490845489038" duration="15904000" />
       <workItem from="1490928606137" duration="503000" />
       <workItem from="1490961637705" duration="2541000" />
-      <workItem from="1490964536817" duration="76000" />
+      <workItem from="1490964536817" duration="103000" />
     </task>
     <task id="LOCAL-00001" summary="first changes , create some class and variables">
       <created>1490757207610</created>
@@ -687,11 +687,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490963957539</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="try to upload the jxl.jar">
+      <created>1490964634036</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1490964634036</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35416000" />
+    <option name="totallyTimeSpent" value="35443000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,7 +755,8 @@
     <MESSAGE value="Driver class coding and other methods" />
     <MESSAGE value="more Driver class methods &#10;And I make the loop menu work properly&#10;Renew the class diagram" />
     <MESSAGE value="Ningqi Lu wrote a class named ReadExcel which could read data with exact type from Excel file&#10;Import a jar package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ningqi Lu wrote a class named ReadExcel which could read data with exact type from Excel file&#10;Import a jar package" />
+    <MESSAGE value="try to upload the jxl.jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to upload the jxl.jar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
