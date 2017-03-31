@@ -10,7 +10,7 @@ import jxl.read.biff.BiffException;
 public class ReadExcel {
 
 	public static void main(String args[]){
-		//The file is allocated at C:\Users\NQ\Desktop。PARTICIPANT.xls
+		//The file is allocated at C:\Users\NQ\Desktop.PARTICIPANT.xls
 		File f=new File("C:"+File.separator+"Users"+File.separator+"NQ"+File.separator+"Desktop"+File.separator+"PARTICIPANT.xls");
 		try {
 			//Get the file
