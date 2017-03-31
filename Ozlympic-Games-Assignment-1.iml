@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Ozlympic-Games-Assignment-1-master/Ozlympic-Games-Assignment-1-master/jxl.jar!/" />
+          <root url="jar://$MODULE_DIR$/jxl.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
