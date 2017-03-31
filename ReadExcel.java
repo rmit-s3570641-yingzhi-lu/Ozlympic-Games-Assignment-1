@@ -10,14 +10,17 @@ import jxl.read.biff.BiffException;
 public class ReadExcel {
 
 	public static void main(String args[]){
+		//The file is allocated at C:\Users\NQ\Desktop銆侾ARTICIPANT.xls
 		File f=new File("C:"+File.separator+"Users"+File.separator+"NQ"+File.separator+"Desktop"+File.separator+"PARTICIPANT.xls");
-	//这是我自己建的，位于E:\dataAnalysis文件夹中的test.xls
 		try {
-			Workbook book=Workbook.getWorkbook(f);//
-			Sheet sheet=book.getSheet(0);   //获得第一个工作表对象
+			//Get the file
+			Workbook book=Workbook.getWorkbook(f);
+			//Get the first sheet
+			Sheet sheet=book.getSheet(0);  
 			for(int i=0;i<sheet.getRows();i++){
 				for(int j=0;j<sheet.getColumns();j++){
-					Cell cell=sheet.getCell(j, i);  //获得单元格
+					//Get the cells
+					Cell cell=sheet.getCell(j, i);
 					System.out.print(cell.getContents()+" "); 
 				}
 				System.out.print("\n");
