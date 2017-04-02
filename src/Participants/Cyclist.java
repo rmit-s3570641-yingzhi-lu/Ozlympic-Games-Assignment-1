@@ -1,4 +1,5 @@
 package Participants;
+import java.util.ArrayList;
 
 /**
  * Created by Jodie Lu on 3/20/2017.
@@ -9,11 +10,4 @@ public class Cyclist extends Athlete{
         super(participantID, participantName, participantState, score);
     }
 
-   /* private void set(){
-        getScore();
-        setScore(30);
-    }*/
-
-
-    //Athlete athlete = new Athlete();
 }
