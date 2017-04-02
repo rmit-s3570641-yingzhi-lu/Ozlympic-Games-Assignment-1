@@ -10,7 +10,8 @@ import java.util.Scanner;
 
 public class Driver {
 
-    private int choice;
+    private int choice;// the choice of the menu
+    private String type; //the type of the game selected
 
     public void mainMenu() {
 
@@ -21,10 +22,10 @@ public class Driver {
                 menu.menuShow();
                 choice = in.nextInt();
                 switch (choice) {
-
                     case 1:
                         menu.showGameSelect();
-                        selectGameLoop();
+                        type = selectGameLoop();
+                        System.out.println(type);
                         break;
                     case 2:
                         predictWinner();
@@ -50,22 +51,24 @@ public class Driver {
         } while (true);
     }
 
-    public void startGame(){
+    public void startGame() {
+        System.out.println("Game Started..... ");
 
     }
 
-    public void displayAllResults(){
-
+    public void displayAllResults() {
+        System.out.println("List below is all results:");
     }
 
-    public void displayAllPoints(){
-
+    public void displayAllPoints() {
+        System.out.println("Show all the athlete points:");
     }
 
     public void predictWinner() {
 
         System.out.println("List below is the name of athlete attend this game:");
         System.out.println("===================================================");
+
         do {
             Scanner in = new Scanner(System.in);
             try {
@@ -94,7 +97,7 @@ public class Driver {
 
     }
 
-    public void selectGameLoop() {
+    public String selectGameLoop() {
         do {
             Scanner in = new Scanner(System.in);
             try {
@@ -103,15 +106,18 @@ public class Driver {
                     case 1:
                         System.out.println("You selected Swimming and it will be started soon.");
                         System.out.println("Remember to predict a winner !");
-                        return;
+                        type = "swimming";
+                        return type;
                     case 2:
                         System.out.println("You selected Cycling and it will be started soon.");
                         System.out.println("Remember to predict a winner !");
-                        return;
+                        type = "cycling";
+                        return type;
                     case 3:
                         System.out.println("You selected Running and it will be started soon.");
                         System.out.println("Remember to predict a winner !");
-                        return;
+                        type = "running";
+                        return type;
                     default:
                         System.out.println("NO GAME OF THIS NUMBER! CHOOSE AGAIN!");
                 }
@@ -124,10 +130,10 @@ public class Driver {
     }
 
 
-
     private void generateScore() {
         double score = new Cycling().complete();
         Cyclist par = (Cyclist) Participant.participantHashMap.get("123");
+        System.out.println(par);
         par.setScore(score);
     }
 

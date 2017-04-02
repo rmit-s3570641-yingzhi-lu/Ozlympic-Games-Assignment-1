@@ -5,8 +5,11 @@ public class Ozlympic {
 
     public static void main(String[] args) {
 
-    Driver driver =new Driver();
-    driver.mainMenu();
 
+        Driver driver = new Driver();
+        ReadExcel rdexcel = new ReadExcel();
+
+        driver.mainMenu();
+        //rdexcel.readExcelData("SUPERATHLETE");
     }
 }

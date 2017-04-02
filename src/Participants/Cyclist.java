@@ -9,10 +9,10 @@ public class Cyclist extends Athlete{
         super(participantID, participantName, participantState, score);
     }
 
-    private void set(){
+   /* private void set(){
         getScore();
         setScore(30);
-    }
+    }*/
 
 
     //Athlete athlete = new Athlete();

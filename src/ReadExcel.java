@@ -22,7 +22,7 @@ public class ReadExcel {
 
     public void readExcelData(String type){
         //The file is allocated at C:\Users\NQ\Desktop¡£PARTICIPANT.xls
-        File f=new File("C:"+File.separator+"Users"+File.separator+"NQ"+File.separator+"Desktop"+File.separator+"PARTICIPANT.xls");
+        File f=new File("PARTICIPANT.xls");
 
         try {
             //Get the file
@@ -31,8 +31,8 @@ public class ReadExcel {
             Sheet sheet=book.getSheet(0);
 
             System.out.println("Input the type(OFFICIAL/SWIMMER/CYCLIST/SPRINTER/SUPERATHLETE):");
-            Scanner sc = new Scanner(System.in);
-            type = sc.nextLine();
+            //Scanner sc = new Scanner(System.in);
+            //type = sc.nextLine();
 
             for(i = 1; i < sheet.getRows(); i++){
                 for(j = 0; j < sheet.getColumns(); j++){
