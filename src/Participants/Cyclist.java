@@ -9,8 +9,8 @@ import static Participants.readCSVdata.COLUMN_NUM;
  */
 public class Cyclist extends Athlete{
 
-    public Cyclist(String participantID, String participantName, String participantState, double score) {
-        super(participantID, participantName, participantState, score);
+    public Cyclist(double score) {
+        super(score);
     }
 
     public static ArrayList<String[]> cyclist = new ArrayList<String[]>();

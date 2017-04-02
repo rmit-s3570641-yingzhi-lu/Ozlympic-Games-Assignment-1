@@ -11,8 +11,8 @@ import static Participants.readCSVdata.COLUMN_NUM;
 
 public class Sprinter extends Athlete{
 
-    public Sprinter(String participantID, String participantName, String participantState, double score) {
-        super(participantID, participantName, participantState, score);
+    public Sprinter(double score) {
+        super(score);
     }
 
     public static ArrayList<String[]> sprinter = new ArrayList<String[]>();

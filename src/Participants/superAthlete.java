@@ -12,11 +12,11 @@ import static Participants.readCSVdata.COLUMN_NUM;
 
 public class superAthlete extends Athlete {
 
-    public static ArrayList<String[]> superathletes = new ArrayList<String[]>();
-
-    public superAthlete(String participantID, String participantName, String participantState, double score) {
-        super(participantID, participantName, participantState, score);
+    public superAthlete(double score) {
+        super(score);
     }
+
+    public static ArrayList<String[]> superathletes = new ArrayList<String[]>();
 
     public static ArrayList<String[]> readSuperAthletedata() throws IOException {
 
