@@ -1,7 +1,3 @@
-import Game.Cycling;
-import Participants.Cyclist;
-import Participants.Participant;
-
 import java.util.Scanner;
 
 /**
@@ -127,14 +123,6 @@ public class Driver {
                 System.out.println("PLEASE INPUT RIGHT CHOICE NUMBER OF GAME SELECTION!");
             }
         } while (true);
-    }
-
-
-    private void generateScore() {
-        double score = new Cycling().complete();
-        Cyclist par = (Cyclist) Participant.participantHashMap.get("123");
-        System.out.println(par);
-        par.setScore(score);
     }
 
 }

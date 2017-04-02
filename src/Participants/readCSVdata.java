@@ -1,10 +1,11 @@
+package Participants;
+
 /**
  * @author Ningqi Lu
  * 27/03/2017
  */
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,8 +17,8 @@ public class readCSVdata {
     static ArrayList<String[]> lineList = new ArrayList<String[]>();// ArrayList used to store the row of csv file
 
 
-    //read the exact csv file，restore data and return data
-    public static void getCsvData() throws IOException {
+    //read the exact csv file，restore data and return ArrayList
+    public static ArrayList<String[]> getCsvData() throws IOException {
 
         BufferedReader br = new BufferedReader(new FileReader("PARTICIPANT.csv"));
         String line = "";
@@ -34,22 +35,10 @@ public class readCSVdata {
             lineList.add(currCol);
         }
         br.close();
+
+        return lineList;
     }
 
-public static String[][] display(){
-
-    String[][] str = new String[lineList.size()][COLUMN_NUM]; // String str used to store the [][]data
-    for (int i = 0; i < lineList.size(); i++) {
-        for (int j = 0; j < COLUMN_NUM; j++) {
-            str[i][j] = lineList.get(i)[j];
-            System.out.print(" ");
-            System.out.print(str[i][j]);
-        }
-        System.out.println();
-    }
-    return str;
-
-}
 }
 
 

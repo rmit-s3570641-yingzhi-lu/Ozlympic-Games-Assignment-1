@@ -1,3 +1,5 @@
+import Participants.*;
+
 import java.io.IOException;
 
 /**
@@ -9,8 +11,17 @@ public class Ozlympic {
 
         Driver driver = new Driver();
         //driver.mainMenu();
-        readCSVdata.getCsvData();
-        readCSVdata.display();
+
+        superAthlete.readSuperAthletedata();
+        System.out.println();
+        Cyclist.readCyclistdata();
+        System.out.println();
+        Sprinter.readSprinterdata();
+        System.out.println();
+        Swimmer.readSprinterdata();
+        System.out.println();
+        Official.readSprinterdata();
+        System.out.println();
 
     }
 }

@@ -3,12 +3,11 @@ package Participants;
 /**
  * Created by Jodie Lu on 3/20/2017.
  */
-public class Athlete extends Participant {
+public class Athlete {
 
     private double score;
 
-    public Athlete(String participantID, String participantName, String participantState, double score) {
-        super(participantID, participantName, participantState);
+    public Athlete(double score) {
         this.score = score;
     }
 
