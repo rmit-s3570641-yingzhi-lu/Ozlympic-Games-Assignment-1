@@ -27,7 +27,7 @@ public class superAthlete extends Athlete {
                 String[] currCol = new String[COLUMN_NUM];
                 for (int n = 0; n < COLUMN_NUM; n++) {
                     currCol[n] = tempSa.get(i)[COLUMN_NUM + n - 5];
-                    System.out.print(currCol[n]);
+                    //System.out.print(currCol[n]);
                 }
                 superathletes.add(currCol);
             }

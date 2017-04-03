@@ -13,7 +13,7 @@ public class Swimmer {
 
     public static ArrayList<String[]> swimmer = new ArrayList<String[]>();
 
-    public static ArrayList<String[]> readSprinterdata() throws IOException {
+    public static ArrayList<String[]> readSwimmerdata() throws IOException {
 
         ArrayList<String[]> tempSw = readCSVdata.getCsvData();
 
@@ -22,7 +22,7 @@ public class Swimmer {
                 String[] currCol = new String[COLUMN_NUM];
                 for (int n = 0; n < COLUMN_NUM; n++) {
                     currCol[n] = tempSw.get(i)[COLUMN_NUM + n - 5];
-                    System.out.print(currCol[n]);
+                    //System.out.print(currCol[n]);
                 }
                 swimmer.add(currCol);
             }

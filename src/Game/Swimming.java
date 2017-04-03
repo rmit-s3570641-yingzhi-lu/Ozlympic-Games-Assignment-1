@@ -1,12 +1,17 @@
 package Game;
 
+import Participants.Sprinter;
+import Participants.Swimmer;
+import Participants.superAthlete;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
 /**
  * Created by Jodie Lu on 3/20/2017.
  */
-public class Swimming implements Complete{
+public class Swimming extends Games implements Complete{
 
     @Override
     public double complete() {
@@ -16,5 +21,16 @@ public class Swimming implements Complete{
 
     }
 
+    @Override
+    public void readDataFromAthlete() throws IOException {
+
+        ArrayList<String[]> attendSwimmingAthlete = new ArrayList<>();
+        attendSwimmingAthlete.addAll(Swimmer.readSwimmerdata());
+        attendSwimmingAthlete.addAll(Sprinter.readSprinterdata());
+        attendSwimmingAthlete.addAll(superAthlete.readSuperAthletedata());
+
+        super.selectRandomNumberAthlete(attendSwimmingAthlete);
+
+    }
 
 }

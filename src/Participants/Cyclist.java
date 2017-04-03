@@ -24,7 +24,7 @@ public class Cyclist extends Athlete{
                 String[] currCol = new String[COLUMN_NUM];
                 for (int n = 0; n < COLUMN_NUM; n++) {
                     currCol[n] = tempCy.get(i)[COLUMN_NUM + n - 5];
-                    System.out.print(currCol[n]);
+                    //System.out.print(currCol[n]);
                 }
                 cyclist.add(currCol);
             }

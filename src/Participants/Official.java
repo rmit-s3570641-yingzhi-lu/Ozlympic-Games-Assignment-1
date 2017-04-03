@@ -15,7 +15,7 @@ public class Official {
 
     public static ArrayList<String[]> official = new ArrayList<String[]>();
 
-    public static ArrayList<String[]> readSprinterdata() throws IOException {
+    public static ArrayList<String[]> readOfficialdata() throws IOException {
 
         ArrayList<String[]> tempOf = readCSVdata.getCsvData();
 
