@@ -27,9 +27,9 @@ public class Cycling extends Games implements Complete {
         attendCyclingAthlete.addAll(Cyclist.readCyclistdata());
         attendCyclingAthlete.addAll(Sprinter.readSprinterdata());
         attendCyclingAthlete.addAll(superAthlete.readSuperAthletedata());
-
         super.selectRandomNumberAthlete(attendCyclingAthlete);
     }
+
 }
 
 

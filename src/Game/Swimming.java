@@ -28,7 +28,6 @@ public class Swimming extends Games implements Complete{
         attendSwimmingAthlete.addAll(Swimmer.readSwimmerdata());
         attendSwimmingAthlete.addAll(Sprinter.readSprinterdata());
         attendSwimmingAthlete.addAll(superAthlete.readSuperAthletedata());
-
         super.selectRandomNumberAthlete(attendSwimmingAthlete);
 
     }

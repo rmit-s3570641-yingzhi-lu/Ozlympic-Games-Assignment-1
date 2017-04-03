@@ -27,6 +27,6 @@ public class Runing extends Games implements Complete {
         attendRunningAthlete.addAll(superAthlete.readSuperAthletedata());
 
         super.selectRandomNumberAthlete(attendRunningAthlete);
-
     }
+
 }

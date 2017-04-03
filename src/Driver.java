@@ -1,3 +1,9 @@
+import Game.Cycling;
+import Game.Games;
+import Game.Runing;
+import Game.Swimming;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -8,6 +14,7 @@ public class Driver {
 
     private int choice;// the choice of the menu
     private String type; //the type of the game selected
+    private int athleteChoice = 0;//the choice of athlete
 
     public void mainMenu() {
 
@@ -20,8 +27,7 @@ public class Driver {
                 switch (choice) {
                     case 1:
                         menu.showGameSelect();
-                        type = selectGameLoop();
-                        System.out.println(type);
+                        showAthleteinSelectedGame();
                         break;
                     case 2:
                         predictWinner();
@@ -60,37 +66,54 @@ public class Driver {
         System.out.println("Show all the athlete points:");
     }
 
-    public void predictWinner() {
-
-        System.out.println("List below is the name of athlete attend this game:");
+    public void showAthleteinSelectedGame() throws IOException {
+        type = selectGameLoop();
+        System.out.println("List below is the name of athlete attend " + type + ":");
         System.out.println("===================================================");
+        switch (type) {
+            case "swimming":
+                Games.attendAthlete.clear();
+                Swimming s = new Swimming();
+                s.readDataFromAthlete();
+                break;
+            case "cycling":
+                Games.attendAthlete.clear();
+                Cycling c = new Cycling();
+                c.readDataFromAthlete();
+                break;
+            case "running":
+                Games.attendAthlete.clear();
+                Runing r = new Runing();
+                r.readDataFromAthlete();
+                break;
+        }
+    }
+
+    public void predictWinner() {
+        System.out.println("Input the ID of Athlete to predict the winner:");
+        System.out.println(Games.attendAthlete.size());
 
         do {
             Scanner in = new Scanner(System.in);
+            boolean b = false;
             try {
-                System.out.println("Predict a winner please: ");
-                choice = in.nextInt();
-                switch (choice) {
-                    case 1:
-                        System.out.println("Option 1");
-                        return;
-                    case 2:
-                        System.out.println("Option 2");
-                        return;
-                    case 3:
-                        System.out.println("Option 3");
-                        return;
-                    default:
-                        System.out.println("INPUT AGAIN PLEASE! ");
-                        break;
+                athleteChoice = in.nextInt();
+                if (athleteChoice > Games.attendAthlete.size()) {
+                    //when input order number larger than size of arraylist
+                    System.out.println("Please input a reasonable choice!");
+                } else {
+                    System.out.println("The Athlete you predicted is:");
+                    for (int n = 0; n < Ozlympic.COLUMN_NUM; n++) {
+                        System.out.print(Games.attendAthlete.get(athleteChoice - 1)[n]+" ");
+                        System.out.println();
+                    }
+                    break;
                 }
             } catch (Exception e) {
-                // if input is a string or others use try catch to let player
-                // input again
-                System.out.println("PLEASE INPUT RIGHT CHOICE NUMBER OF WINNER YOU PREDICTED!");
+                System.out.println("Please input an order number of athlete list above!");
+                b = true;
             }
         } while (true);
-
     }
 
     public String selectGameLoop() {
