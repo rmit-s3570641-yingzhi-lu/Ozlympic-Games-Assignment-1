@@ -12,23 +12,16 @@ import java.util.Random;
  * Created by Jodie Lu on 3/20/2017.
  */
 public class Cycling extends Games implements Complete {
-	/*
-	 * (non-Javadoc)
-	 * @see Game.Complete#complete()
-	 */
 
     @Override
-    public double complete() {
-        Random random = new Random();
-        double score = (random.nextDouble() * 300.0d) + 500.0d;
+    public String[] complete() {
+        String[] score=new String[attendAthlete.size()];
+        for (int count=0;count<attendAthlete.size();count++) {
+            Random random = new Random();
+            score[count] = String.format("%.2f",((random.nextDouble() * 300.0d) + 500.0d));
+        }
         return score;
     }
-    
-    /*
-     * (non-Javadoc)
-     * @see Game.Games#readDataFromAthlete()
-     */
-
     @Override
     public void readDataFromAthlete() throws IOException {
 
@@ -36,11 +29,9 @@ public class Cycling extends Games implements Complete {
         attendCyclingAthlete.addAll(Cyclist.readCyclistdata());
         attendCyclingAthlete.addAll(Sprinter.readSprinterdata());
         attendCyclingAthlete.addAll(superAthlete.readSuperAthletedata());
-
         super.selectRandomNumberAthlete(attendCyclingAthlete);
     }
-    
-    
+
 }
 
 

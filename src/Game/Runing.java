@@ -13,9 +13,12 @@ import java.util.Random;
 public class Runing extends Games implements Complete {
 
     @Override
-    public double complete() {
-        Random random = new Random();
-        double score = (random.nextDouble() * 10.0d) + 10.0d;
+    public String[] complete() {
+        String[] score=new String[attendAthlete.size()];
+        for (int count=0;count<attendAthlete.size();count++) {
+            Random random = new Random();
+            score[count] = String.format("%.2f",((random.nextDouble() * 10.0d) + 10.0d));
+        }
         return score;
     }
 
@@ -27,6 +30,6 @@ public class Runing extends Games implements Complete {
         attendRunningAthlete.addAll(superAthlete.readSuperAthletedata());
 
         super.selectRandomNumberAthlete(attendRunningAthlete);
-
     }
+
 }

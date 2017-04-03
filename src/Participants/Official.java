@@ -24,7 +24,7 @@ public class Official {
                 String[] currCol = new String[COLUMN_NUM];
                 for (int n = 0; n < COLUMN_NUM; n++) {
                     currCol[n] = tempOf.get(i)[COLUMN_NUM + n - 5];
-                    System.out.print(currCol[n]);
+                    //System.out.print(currCol[n]);
                 }
                 official.add(currCol);
             }

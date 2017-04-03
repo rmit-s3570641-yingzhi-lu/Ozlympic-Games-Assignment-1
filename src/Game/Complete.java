@@ -5,5 +5,5 @@ package Game;
  */
 public interface Complete {
 
-     double complete();
+     String[] complete();
 }
