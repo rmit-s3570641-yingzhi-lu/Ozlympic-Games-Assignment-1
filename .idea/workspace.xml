@@ -108,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="superAthlete.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="superAthlete.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Participants/superAthlete.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -117,16 +117,6 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#360#370#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Aaaaaaaaaaa.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Aaaaaaaaaaa.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -820,7 +810,7 @@
       <workItem from="1491105681598" duration="12284000" />
       <workItem from="1491127113209" duration="6827000" />
       <workItem from="1491134741528" duration="11829000" />
-      <workItem from="1491196659522" duration="130000" />
+      <workItem from="1491196659522" duration="582000" />
     </task>
     <task id="LOCAL-00001" summary="first changes , create some class and variables">
       <created>1490757207610</created>
@@ -924,7 +914,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67002000" />
+    <option name="totallyTimeSpent" value="67454000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
