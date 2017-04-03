@@ -10,7 +10,7 @@ public class Ozlympic {
     public static void main(String[] args) throws IOException {
 
         Driver driver = new Driver();
-        //driver.mainMenu();
+        driver.mainMenu();
 
         superAthlete.readSuperAthletedata();
         System.out.println();
