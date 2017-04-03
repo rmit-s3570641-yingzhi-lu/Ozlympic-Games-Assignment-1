@@ -1,3 +1,4 @@
+package Participants;
 
 abstract class Participant {
 	private int ID;

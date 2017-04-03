@@ -12,6 +12,10 @@ import java.util.Random;
  * Created by Jodie Lu on 3/20/2017.
  */
 public class Cycling extends Games implements Complete {
+	/*
+	 * (non-Javadoc)
+	 * @see Game.Complete#complete()
+	 */
 
     @Override
     public double complete() {
@@ -19,6 +23,11 @@ public class Cycling extends Games implements Complete {
         double score = (random.nextDouble() * 300.0d) + 500.0d;
         return score;
     }
+    
+    /*
+     * (non-Javadoc)
+     * @see Game.Games#readDataFromAthlete()
+     */
 
     @Override
     public void readDataFromAthlete() throws IOException {
@@ -30,6 +39,8 @@ public class Cycling extends Games implements Complete {
 
         super.selectRandomNumberAthlete(attendCyclingAthlete);
     }
+    
+    
 }
 
 
