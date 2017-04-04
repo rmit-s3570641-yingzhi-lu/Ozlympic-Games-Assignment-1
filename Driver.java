@@ -61,7 +61,10 @@ public class Driver {
 
 
     }
-
+    
+    /**
+     * Created by Ningqi Lu on 4/02/2017.
+     */
     public HashMap getAthleteScore() {
 
         String[] score = new String[Games.attendAthlete.size()];
@@ -86,7 +89,9 @@ public class Driver {
         return scoreMap;
     }
 
-
+    /**
+     * Created by Ningqi Lu on 4/03/2017.
+     */
     public void startGame() {
 
         System.out.println("Game Started..... ");
