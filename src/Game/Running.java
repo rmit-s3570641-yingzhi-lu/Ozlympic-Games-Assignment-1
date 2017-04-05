@@ -12,7 +12,7 @@ import java.util.Random;
  *
  * This class is Running game activities
  *
- * Created by Yingzhi Lu on 3/20/2017.
+ * Created by Ningqi Lu on 3/20/2017.
  * Modified by both Ningqi Lu and Yingzhi Lu
  */
 public class Running extends Games implements Complete {

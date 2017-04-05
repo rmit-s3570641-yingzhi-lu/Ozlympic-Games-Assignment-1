@@ -8,7 +8,7 @@ import java.util.ArrayList;
  *
  * This class is an abstract class which is extended by games
  *
- * Created by Yingzhi Lu on 3/20/2017.
+ * Created by Ningqi Lu on 3/20/2017.
  * Modified by both Ningqi Lu and Yingzhi Lu
  */
 

@@ -8,10 +8,13 @@ package Participants;
  * Modified by both Ningqi Lu and Yingzhi Lu
  */
 
+import java.util.HashMap;
+
 public class Athlete extends Participant{
 
     private String score; // the score of every athlete
     private Integer point; //the point of every athlete
+    private static HashMap<String,Integer> AthletePointHashMap = new HashMap<>();
 
     /**
      * Constructor
@@ -51,6 +54,7 @@ public class Athlete extends Participant{
         this.point = point;
     }
 
+
     /**
      * getters and setters
      * @return
@@ -69,5 +73,13 @@ public class Athlete extends Participant{
 
     public void setPoint(Integer point) {
         this.point = point;
+    }
+
+    public static HashMap<String, Integer> getAthletePointHashMap() {
+        return AthletePointHashMap;
+    }
+
+    public void setAthletePointHashMap(HashMap<String, Integer> athletePointHashMap) {
+        AthletePointHashMap = athletePointHashMap;
     }
 }

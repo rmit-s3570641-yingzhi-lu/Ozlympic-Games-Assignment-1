@@ -2,6 +2,7 @@ import Game.Cycling;
 import Game.Games;
 import Game.Running;
 import Game.Swimming;
+import Participants.Athlete;
 import Participants.Official;
 
 import java.io.IOException;
@@ -24,8 +25,9 @@ public class Driver {
     private int choice;// the choice of the menu
     private String type; //the type of the game selected
     private int athleteChoice = 0;//the choice of athlete
+    private String referee;
     public static HashMap<String, String> scoreMap = new HashMap<String, String>();//hashmap used to store the score and athlete data
-
+    ArrayList<HashMap.Entry<String, String>> storeTopThreeList = new ArrayList<>(); // an ArrayList to store the top 3 athlete
     /**
      * main menu class which control the main selection loop
      */
@@ -69,7 +71,8 @@ public class Driver {
 
     /**
      * get athlete score with different types
-     * @return
+     *
+     * @return scoreMap
      */
     public HashMap getAthleteScore() {
 
@@ -99,6 +102,11 @@ public class Driver {
 
     /**
      * startGame method which is responsible for game running and score calculate
+     * sort the score of athlete
+     * judge the prediction of user
+     * allocate the score
+     * @return list
+     * @throws IOException
      */
     public void startGame() throws IOException {
 
@@ -117,35 +125,65 @@ public class Driver {
         for (HashMap.Entry<String, String> mapping : list) {
             System.out.println(mapping.getKey() + ":    " + mapping.getValue());
         }
+
+        System.out.println("===================================================================");
         // if to judge weather this is the topped athelete user predicted
         if (list.get(0).getKey().equals(Games.getAttendAthlete().get(athleteChoice - 1)[1]) == TRUE) {
             System.out.println("Congratulation, your prediction is right!");
         } else {
             System.out.println("Sorry, maybe next time you could predit the right athletes :)");
         }
-
-
+        this.storeTopThreeList=list;
     }
 
+
+
     /**
-     *
+     * print out the results of this game
      * @throws IOException
      */
 
     public void displayAllResults() throws IOException {
         System.out.println("List below is all results:");
-        if(type.equals("swimming")){
+        if (type.equals("swimming")) {
+            System.out.println("Game: S01");
+        } else if (type.equals("running")) {
+            System.out.println("Game: R01");
+        } else if (type.equals("cycling"))
+            System.out.println("Game: C01");
+        System.out.print("Referee:   ");
+        System.out.println(referee);
 
+        Set entries = scoreMap.entrySet();
+        Iterator iterator = entries.iterator();
+        while (iterator.hasNext()) {
+            HashMap.Entry entry = (HashMap.Entry) iterator.next();
+            Object key = entry.getKey();
+            Object value = entry.getValue();
+            System.out.println("Name: " + key + "     Score: " + value);
         }
-        System.out.println(getRandomOfficial());
-
-
-
-
     }
 
-    public void displayAllPoints() {
+    /*
+     * this method is printout the points of this game
+     */
+    public void displayAllPoints() throws IOException {
+        System.out.println("===================================================================");
         System.out.println("Show all the athlete points:");
+
+        String gold = storeTopThreeList.get(0).getKey();
+        String silver = storeTopThreeList.get(1).getKey();
+        String bronze = storeTopThreeList.get(2).getKey();
+
+        System.out.println(gold +"  5 points");
+        System.out.println(silver +"  2 points");
+        System.out.println(bronze + "  1 points");
+        int i=3;
+        while(i<Games.getAttendAthlete().size()){
+            System.out.println(storeTopThreeList.get(i).getKey() + "  0 points");
+            i++;
+        }
+
     }
 
     /**
@@ -253,11 +291,10 @@ public class Driver {
      *
      * @throws IOException
      */
-    public String getRandomOfficial() throws IOException {
+    public void getRandomOfficial() throws IOException {
         int i = (int) (Math.random() * Official.getOfficial().size());
-        String s= new String(Official.getOfficial().get(i)[1]);
-        System.out.println(s);
-        return  s;
+        referee = new String(Official.getOfficial().get(i)[1]);
+        System.out.println(referee);
     }
 
 }

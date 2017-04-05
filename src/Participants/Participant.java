@@ -1,8 +1,4 @@
 package Participants;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-
 /*
  * abstarct class Participant
  *
@@ -32,22 +28,7 @@ public abstract class Participant {
         this.participantAge = participantAge;
     }
 
-    ArrayList<Participant> participants = new ArrayList<Participant>();
-
-    public HashMap<String, Participant> getParticipantHashMap() {
-        return participantHashMap;
-    }
-
-    public static HashMap<String, Participant> participantHashMap = new HashMap<String, Participant>();
-
-/*    public void add() {
-        participantHashMap.put("123", new Cyclist("123", "jack", "abc", 0));
-
-        Participant par = participantHashMap.get("123");
-        if (par instanceof Cyclist) {
-
-        }
-    }*/
+    //ArrayList<Participant> participants = new ArrayList<Participant>();
 
     /**
      * Getters and Setters
