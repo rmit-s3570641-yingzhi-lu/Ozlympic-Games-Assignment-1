@@ -40,14 +40,14 @@ public abstract class Participant {
 
     public static HashMap<String, Participant> participantHashMap = new HashMap<String, Participant>();
 
-    public void add() {
-        //participantHashMap.put("123", new Cyclist("123", "jack", "abc", 0));
+/*    public void add() {
+        participantHashMap.put("123", new Cyclist("123", "jack", "abc", 0));
 
-        //Participant par = participantHashMap.get("123");
-        //if (par instanceof Cyclist) {
+        Participant par = participantHashMap.get("123");
+        if (par instanceof Cyclist) {
 
-        //}
-    }
+        }
+    }*/
 
     /**
      * Getters and Setters

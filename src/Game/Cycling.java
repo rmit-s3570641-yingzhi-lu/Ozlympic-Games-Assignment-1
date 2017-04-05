@@ -11,7 +11,7 @@ import java.util.Random;
 /*
  * Cycling Class
  *
- * This method is Cycling game activities
+ * This class is Cycling game activities
  *
  * Created by Yingzhi Lu on 3/20/2017.
  * Modified by both Ningqi Lu and Yingzhi Lu

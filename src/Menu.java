@@ -1,12 +1,17 @@
-import java.util.Scanner;
-
-/**
- * @author Ningqi Lu
- *         22/03/2017
+/*
+ * Menu Class
+ *
+ * This class is responsible for printing out the menu
+ *
+ * Created by Ningqi Lu on 3/22/2017.
+ * Modified by both Ningqi Lu and Yingzhi Lu
  */
 
 public class Menu {
 
+    /**
+     * show the main selection menu
+     */
     public void menuShow() {
         String menu[] = {"\n Ozlympic Game",
                 "===================================",
@@ -21,6 +26,9 @@ public class Menu {
             System.out.println(menu[i]);
     }
 
+    /**
+     * show the game select menu
+     */
     public void showGameSelect(){
 
         System.out.println("Please select one Ozlympic game to play:");

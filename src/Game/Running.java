@@ -10,7 +10,7 @@ import java.util.Random;
 /*
  * Running Class
  *
- * This method is Running game activities
+ * This class is Running game activities
  *
  * Created by Yingzhi Lu on 3/20/2017.
  * Modified by both Ningqi Lu and Yingzhi Lu

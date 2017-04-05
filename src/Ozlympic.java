@@ -1,8 +1,13 @@
 
 import java.io.IOException;
 
-/**
- * Created by Jodie Lu on 3/20/2017.
+/*
+ * Ozympic Class
+ *
+ * This class is the entrance of
+ *
+ * Created by Ningqi Lu on 3/22/2017.
+ * Modified by both Ningqi Lu and Yingzhi Lu
  */
 public class Ozlympic {
 

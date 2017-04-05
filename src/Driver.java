@@ -4,13 +4,16 @@ import Game.Running;
 import Game.Swimming;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+import java.util.Map.Entry;
 
-/**
- * Created by Jodie Lu on 3/20/2017.
+/*
+ * Driver Class
+ *
+ * This class is the main class activities done
+ *
+ * Created by Yingzhi Lu on 3/20/2017.
+ * Modified by both Ningqi Lu and Yingzhi Lu
  */
 
 public class Driver {
@@ -21,8 +24,7 @@ public class Driver {
     public static HashMap<String, String> scoreMap = new HashMap<String, String>();//hashmap used to store the score and athlete data
 
     /**
-     * Created by Ningqi Lu
-     * Match user's choice from Menu
+     * main menu class which control the main selection loop
      */
     public void mainMenu() {
 
@@ -62,17 +64,9 @@ public class Driver {
     }
 
 
-    /**
-     * Created by Jodie Lu
-     */
-    public void storeHistoryData(Object o, String[] strings) {
-
-
-    }
-
     public HashMap getAthleteScore() {
 
-        String[] score = new String[Games.attendAthlete.size()];
+        String[] score = new String[Games.getAttendAthlete().size()];
         switch (type) {
             case "swimming":
                 Swimming s = new Swimming();
@@ -88,15 +82,16 @@ public class Driver {
                 break;
         }
 
-        for(int i=0;i<Games.attendAthlete.size();i++){
-            scoreMap.put(Games.attendAthlete.get(i)[1],score[i]);
+        for (int i = 0; i < Games.getAttendAthlete().size(); i++) {
+
+            scoreMap.put(Games.getAttendAthlete().get(i)[1], score[i]);
+
         }
         return scoreMap;
     }
 
     /**
-     * Created by Jodie Lu
-     *
+     * startGame method which is responsible for game running and score calculate
      */
     public void startGame() {
 
@@ -104,14 +99,17 @@ public class Driver {
         System.out.println("Here is the score of each athlete:");
         getAthleteScore().clear();
         getAthleteScore();
-        Set entries = scoreMap.entrySet();
-        Iterator iterator = entries.iterator();
-        while (iterator.hasNext()) {
-            HashMap.Entry entry = (HashMap.Entry) iterator.next();
-            Object key = entry.getKey();
-            Object value = entry.getValue();
-            System.out.println("Name: "+key+"     Score: "+value);
+
+        ArrayList<HashMap.Entry<String, String>> list = new ArrayList<>(scoreMap.entrySet());
+        //use collection to sort
+        Collections.sort(list, Comparator.comparing(Entry::getValue));
+
+        //sort the list and get the decrease sort
+        for (HashMap.Entry<String, String> mapping : list) {
+            System.out.println(mapping.getKey() + ":    " + mapping.getValue());
         }
+
+        //Games.getAttendAthlete().get(athleteChoice - 1)[1].equals(scoreMap.get())
     }
 
     public void displayAllResults() {
@@ -184,6 +182,7 @@ public class Driver {
 
     /**
      * Created by Jodie Lu
+     * the selection loop of game type
      */
 
     public String selectGameLoop() {
@@ -216,6 +215,14 @@ public class Driver {
                 System.out.println("PLEASE INPUT RIGHT CHOICE NUMBER OF GAME SELECTION!");
             }
         } while (true);
+    }
+
+
+    /**
+     * get a random official to
+     */
+    public void getRandomOfficial(){
+
     }
 
 }

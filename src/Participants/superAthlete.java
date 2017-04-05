@@ -60,7 +60,7 @@ public class superAthlete extends Athlete {
      * data reader of superAthlete athlete
      * @throws IOException
      */
-    public static void readSuperAthletedata() throws IOException {
+    public static void readSuperAthleteData() throws IOException {
 
         ArrayList<String[]> tempSa = readCSVdata.getLineList();
 
@@ -82,7 +82,7 @@ public class superAthlete extends Athlete {
      * @throws IOException
      */
     public static ArrayList<String[]> getSuperathletes() throws IOException {
-        readSuperAthletedata();
+        readSuperAthleteData();
         return superathletes;
     }
 

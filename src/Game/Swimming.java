@@ -11,7 +11,7 @@ import java.util.Random;
 /*
  * Swimming Class
  *
- * This method is Swimming game activities
+ * This class is Swimming game activities
  *
  * Created by Yingzhi Lu on 3/20/2017.
  * Modified by both Ningqi Lu and Yingzhi Lu

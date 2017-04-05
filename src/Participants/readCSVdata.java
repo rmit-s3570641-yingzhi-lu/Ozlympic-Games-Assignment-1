@@ -1,5 +1,12 @@
 package Participants;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+
 /*
  * readCSVdata Class
  *
@@ -8,12 +15,6 @@ package Participants;
  * Created by Ningqi Lu on 3/27/2017.
  * Modified by both Ningqi Lu and Yingzhi Lu
  */
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 public class readCSVdata {
 

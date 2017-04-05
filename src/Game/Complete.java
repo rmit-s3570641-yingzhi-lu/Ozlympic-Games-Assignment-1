@@ -1,7 +1,7 @@
 /*
  * Interface Complete
  *
- * This method is used to calculate score of Athlete
+ * This interface is used to calculate score of Athlete
  *
  * Created by Jodie Lu on 3/20/2017.
  */
