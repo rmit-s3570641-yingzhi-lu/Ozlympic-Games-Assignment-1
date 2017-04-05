@@ -9,14 +9,14 @@ import static Participants.readCSVdata.COLUMN_NUM;
  * Created by Jodie Lu on 3/20/2017.
  */
 
-
 public class superAthlete extends Athlete {
 
-    public superAthlete(double score) {
-        super(score);
-    }
-
     public static ArrayList<String[]> superathletes = new ArrayList<String[]>();
+
+
+    public superAthlete(String participantID, String participantName, String participantState, String score) {
+        super(participantID, participantName, participantState, score);
+    }
 
     public static ArrayList<String[]> readSuperAthletedata() throws IOException {
 

@@ -20,6 +20,10 @@ public class Driver {
     private int athleteChoice = 0;//the choice of athlete
     public static HashMap<String, String> scoreMap = new HashMap<String, String>();//hashmap used to store the score and athlete data
 
+    /**
+     * Created by Ningqi Lu
+     * Match user's choice from Menu
+     */
     public void mainMenu() {
 
         Menu menu = new Menu();
@@ -57,11 +61,19 @@ public class Driver {
         } while (true);
     }
 
+
+    /**
+     * Created by Jodie Lu
+     */
     public void storeHistoryData(Object o, String[] strings) {
 
 
     }
 
+    /**
+     * Created by Ningqi Lu
+     * Generate and store athletes' scores
+     */
     public HashMap getAthleteScore() {
 
         String[] score = new String[Games.attendAthlete.size()];
@@ -86,7 +98,10 @@ public class Driver {
         return scoreMap;
     }
 
-
+    /**
+     * Created by Jodie Lu
+     *
+     */
     public void startGame() {
 
         System.out.println("Game Started..... ");
@@ -111,6 +126,10 @@ public class Driver {
         System.out.println("Show all the athlete points:");
     }
 
+    /**
+     * Created by Ningqi Lu
+     * Show the athlete attending each game
+     */
     public void showAthleteinSelectedGame() throws IOException {
         type = selectGameLoop();
         System.out.println("List below is the name of athlete attend " + type + ":");
@@ -134,6 +153,11 @@ public class Driver {
         }
     }
 
+
+    /**
+     * Created by Jodie Lu
+     * Predict winner of ecah game for user
+     */
     public void predictWinner() {
         System.out.println("Input the order number of Athlete to predict the winner:");
         //System.out.println(Games.attendAthlete.size());
@@ -161,6 +185,10 @@ public class Driver {
         } while (true);
         System.out.println();
     }
+
+    /**
+     * Created by Jodie Lu
+     */
 
     public String selectGameLoop() {
         do {
