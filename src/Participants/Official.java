@@ -5,19 +5,37 @@ import java.util.ArrayList;
 
 import static Participants.readCSVdata.COLUMN_NUM;
 
-/**
- * Created by Jodie Lu on 3/20/2017.
+/*
+ * Official Class
+ *
+ * This class is superAthlete which read the Official data from csv
+ *
+ * Created by Yingzhi Lu on 3/20/2017.
+ * Modified by both Ningqi Lu and Yingzhi Lu
  */
-public class Official {
+public class Official extends Participant{
 
-    public Official() {
+    public static ArrayList<String[]> official = new ArrayList<String[]>();//official athlete
+
+    /**
+     * Constructor
+     *
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     */
+    public Official(String participantID, String participantName, String participantState, int participantAge) {
+        super(participantID, participantName, participantState, participantAge);
     }
 
-    public static ArrayList<String[]> official = new ArrayList<String[]>();
+    /**
+     * data reader of Official
+     * @throws IOException
+     */
+    public static void readOfficialdata() throws IOException {
 
-    public static ArrayList<String[]> readOfficialdata() throws IOException {
-
-        ArrayList<String[]> tempOf = readCSVdata.getCsvData();
+        ArrayList<String[]> tempOf = readCSVdata.getLineList();
 
         for (int i = 0; i < tempOf.size(); i++) {
             if (tempOf.get(i)[COLUMN_NUM - 1].equals("OFFICIAL")) {
@@ -29,10 +47,15 @@ public class Official {
                 official.add(currCol);
             }
         }
-        return official;
     }
 
-    public static ArrayList<String[]> getOfficial() {
+    /**
+     * getter and setter of ArrayList official
+     * @return official
+     * @throws IOException
+     */
+    public static ArrayList<String[]> getOfficial() throws IOException {
+        readOfficialdata();
         return official;
     }
 

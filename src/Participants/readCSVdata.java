@@ -1,8 +1,12 @@
 package Participants;
 
-/**
- * @author Ningqi Lu
- * 27/03/2017
+/*
+ * readCSVdata Class
+ *
+ * This class is used to read data from csv data file
+ *
+ * Created by Ningqi Lu on 3/27/2017.
+ * Modified by both Ningqi Lu and Yingzhi Lu
  */
 
 import java.io.BufferedReader;
@@ -18,7 +22,7 @@ public class readCSVdata {
 
 
     //read the exact csv file，restore data and return ArrayList
-    public static ArrayList<String[]> getCsvData() throws IOException {
+    public static void getCsvData() throws IOException {
 
         BufferedReader br = new BufferedReader(new FileReader("PARTICIPANT.csv"));
         String line = "";
@@ -30,15 +34,28 @@ public class readCSVdata {
                 //First to determine whether the data to be read, to prevent overflow
                 if (st.hasMoreTokens()) {
                     currCol[i] = st.nextToken();
+                    //System.out.print(currCol[i]);
                 }
             }
             lineList.add(currCol);
+            //System.out.println();
         }
         br.close();
+    }
 
+    /**
+     * getter and setter of ArrayList lineList
+     * @return lineList
+     * @throws IOException
+     */
+    public static ArrayList<String[]> getLineList() throws IOException {
+        getCsvData();
         return lineList;
     }
 
+    public static void setLineList(ArrayList<String[]> lineList) {
+        readCSVdata.lineList = lineList;
+    }
 }
 
 

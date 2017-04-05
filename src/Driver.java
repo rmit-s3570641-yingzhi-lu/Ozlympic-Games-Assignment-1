@@ -1,6 +1,6 @@
 import Game.Cycling;
 import Game.Games;
-import Game.Runing;
+import Game.Running;
 import Game.Swimming;
 
 import java.io.IOException;
@@ -70,10 +70,6 @@ public class Driver {
 
     }
 
-    /**
-     * Created by Ningqi Lu
-     * Generate and store athletes' scores
-     */
     public HashMap getAthleteScore() {
 
         String[] score = new String[Games.attendAthlete.size()];
@@ -87,7 +83,7 @@ public class Driver {
                 score = c.complete();
                 break;
             case "running":
-                Runing r = new Runing();
+                Running r = new Running();
                 score = r.complete();
                 break;
         }
@@ -136,18 +132,18 @@ public class Driver {
         System.out.println("===================================================");
         switch (type) {
             case "swimming":
-                Games.attendAthlete.clear();
+                Games.getAttendAthlete().clear();
                 Swimming s = new Swimming();
                 s.readDataFromAthlete();
                 break;
             case "cycling":
-                Games.attendAthlete.clear();
+                Games.getAttendAthlete().clear();
                 Cycling c = new Cycling();
                 c.readDataFromAthlete();
                 break;
             case "running":
-                Games.attendAthlete.clear();
-                Runing r = new Runing();
+                Games.getAttendAthlete().clear();
+                Running r = new Running();
                 r.readDataFromAthlete();
                 break;
         }
@@ -167,13 +163,13 @@ public class Driver {
             boolean b = false;
             try {
                 athleteChoice = in.nextInt();
-                if (athleteChoice > Games.attendAthlete.size()) {
+                if (athleteChoice > Games.getAttendAthlete().size()) {
                     //when input order number larger than size of arraylist
                     System.out.println("Please input a reasonable choice!");
                 } else {
                     System.out.println("The Athlete you predicted is:");
                     for (int n = 0; n < Ozlympic.COLUMN_NUM; n++) {
-                        System.out.print(Games.attendAthlete.get(athleteChoice - 1)[n] + " ");
+                        System.out.print(Games.getAttendAthlete().get(athleteChoice - 1)[n] + " ");
                         //
                     }
                     break;

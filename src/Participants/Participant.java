@@ -3,19 +3,33 @@ package Participants;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
+/*
+ * abstarct class Participant
+ *
+ * This method is used to define participant
+ *
  * Created by Jodie Lu on 3/20/2017.
  */
-public class Participant {
+
+public abstract class Participant {
 
     private String participantID;
     private String participantName;
     private String participantState;
+    private int participantAge;
 
-    public Participant(String participantID, String participantName, String participantState) {
+    /**
+     * Constructor
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     */
+    public Participant(String participantID, String participantName, String participantState, int participantAge) {
         this.participantID = participantID;
         this.participantName = participantName;
         this.participantState = participantState;
+        this.participantAge = participantAge;
     }
 
     ArrayList<Participant> participants = new ArrayList<Participant>();
@@ -35,6 +49,9 @@ public class Participant {
         //}
     }
 
+    /**
+     * Getters and Setters
+     */
     public String getParticipantID() {
         return participantID;
     }
@@ -60,20 +77,11 @@ public class Participant {
         this.participantState = participantState;
     }
 
-
-    public ArrayList<Participants.Participant> getParticipants() {
-        return participants;
+    public int getParticipantAge() {
+        return participantAge;
     }
 
-
-    public void setParticipants(ArrayList<Participants.Participant> participants) {
-        this.participants = participants;
-    }
-
-
-
-
-    public static void setParticipantHashMap(HashMap<String, Participants.Participant> participantHashMap) {
-        Participant.participantHashMap = participantHashMap;
+    public void setParticipantAge(int participantAge) {
+        this.participantAge = participantAge;
     }
 }

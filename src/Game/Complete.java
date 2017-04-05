@@ -1,8 +1,12 @@
+/*
+ * Interface Complete
+ *
+ * This method is used to calculate score of Athlete
+ *
+ * Created by Jodie Lu on 3/20/2017.
+ */
 package Game;
 
-/**
- * Created by Jodie Lu on 3/27/2017.
- */
 public interface Complete {
 
      String[] complete();

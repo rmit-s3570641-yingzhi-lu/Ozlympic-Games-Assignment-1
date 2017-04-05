@@ -6,21 +6,65 @@ import java.util.ArrayList;
 
 import static Participants.readCSVdata.COLUMN_NUM;
 
-/**
- * Created by Jodie Lu on 3/20/2017.
+/*
+ * Swimmer Class
+ *
+ * This class is Swimmer which read the Swimmer data from csv
+ *
+ * Created by Yingzhi Lu on 3/20/2017.
+ * Modified by both Ningqi Lu and Yingzhi Lu
  */
 public class Swimmer extends Athlete{
 
 
     public static ArrayList<String[]> swimmer = new ArrayList<String[]>();
 
-    public Swimmer(String participantID, String participantName, String participantState, String score) {
-        super(participantID, participantName, participantState, score);
+    /**
+     * Constructor
+     *
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     */
+    public Swimmer(String participantID, String participantName, String participantState, int participantAge) {
+        super(participantID, participantName, participantState, participantAge);
     }
 
-    public static ArrayList<String[]> readSwimmerdata() throws IOException {
+    /**
+     * Constructor
+     *
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     * @param score
+     */
+    public Swimmer(String participantID, String participantName, String participantState, int participantAge, String score) {
+        super(participantID, participantName, participantState, participantAge, score);
+    }
 
-        ArrayList<String[]> tempSw = readCSVdata.getCsvData();
+    /**
+     * Constructor
+     *
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     * @param point
+     */
+    public Swimmer(String participantID, String participantName, String participantState, int participantAge, Integer point) {
+        super(participantID, participantName, participantState, participantAge, point);
+    }
+
+
+    /**
+     * data reader of Swimmer athlete
+     * @throws IOException
+     */
+    public static void readSwimmerdata() throws IOException {
+
+        ArrayList<String[]> tempSw = readCSVdata.getLineList();
 
         for (int i = 0; i < tempSw.size(); i++) {
             if (tempSw.get(i)[COLUMN_NUM - 1].equals("SWIMMER")) {
@@ -32,10 +76,15 @@ public class Swimmer extends Athlete{
                 swimmer.add(currCol);
             }
         }
-        return swimmer;
     }
 
-    public static ArrayList<String[]> getSwimmer() {
+    /**
+     * getter and setter of ArrayList Swimmer
+     * @return Swimmer
+     * @throws IOException
+     */
+    public static ArrayList<String[]> getSwimmer() throws IOException {
+        readSwimmerdata();
         return swimmer;
     }
 

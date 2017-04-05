@@ -4,21 +4,66 @@ import java.util.ArrayList;
 
 import static Participants.readCSVdata.COLUMN_NUM;
 
-/**
- * Created by Jodie Lu on 3/20/2017.
+/*
+ * Cyclist Class
+ *
+ * This class is Cyclist which read the cyclist data from csv
+ *
+ * Created by Yingzhi Lu on 3/20/2017.
+ * Modified by both Ningqi Lu and Yingzhi Lu
  */
+
 public class Cyclist extends Athlete{
 
 
-    public static ArrayList<String[]> cyclist = new ArrayList<String[]>();
+    public static ArrayList<String[]> cyclist = new ArrayList<String[]>(); //cyclist arraylist
 
-    public Cyclist(String participantID, String participantName, String participantState, String score) {
-        super(participantID, participantName, participantState, score);
+    /**
+     * Constructor
+     *
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     */
+    public Cyclist(String participantID, String participantName, String participantState, int participantAge) {
+        super(participantID, participantName, participantState, participantAge);
     }
 
-    public static ArrayList<String[]> readCyclistdata() throws IOException {
+    /**
+     * Constructor
+     *
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     * @param score
+     */
+    public Cyclist(String participantID, String participantName, String participantState, int participantAge, String score) {
+        super(participantID, participantName, participantState, participantAge, score);
+    }
 
-        ArrayList<String[]> tempCy = readCSVdata.getCsvData();
+    /**
+     * Constructor
+     *
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     * @param point
+     */
+    public Cyclist(String participantID, String participantName, String participantState, int participantAge, Integer point) {
+        super(participantID, participantName, participantState, participantAge, point);
+    }
+
+
+    /**
+     * data reader of cyclist athlete
+     * @throws IOException
+     */
+    public static void readCyclistData() throws IOException {
+
+        ArrayList<String[]> tempCy = readCSVdata.getLineList();
 
         for (int i = 0; i < tempCy.size(); i++) {
             if (tempCy.get(i)[COLUMN_NUM - 1].equals("CYCLIST")) {
@@ -30,12 +75,15 @@ public class Cyclist extends Athlete{
                 cyclist.add(currCol);
             }
         }
-        return cyclist;
-
-
     }
 
-    public static ArrayList<String[]> getCyclist() {
+    /**
+     * getter and setter of ArrayList Cyclist
+     * @return cyclist
+     * @throws IOException
+     */
+    public static ArrayList<String[]> getCyclist() throws IOException {
+        readCyclistData();
         return cyclist;
     }
 

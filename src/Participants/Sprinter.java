@@ -5,22 +5,64 @@ import java.util.ArrayList;
 
 import static Participants.readCSVdata.COLUMN_NUM;
 
-/**
- * Created by Jodie Lu on 3/20/2017.
+/*
+ * Sprinter Class
+ *
+ * This class is Sprinter which read the Sprinter data from csv
+ *
+ * Created by Yingzhi Lu on 3/20/2017.
+ * Modified by both Ningqi Lu and Yingzhi Lu
  */
 
 public class Sprinter extends Athlete{
 
-    public static ArrayList<String[]> sprinter = new ArrayList<String[]>();
+    public static ArrayList<String[]> sprinter = new ArrayList<String[]>(); //sprinter athlete
 
-
-    public Sprinter(String participantID, String participantName, String participantState, String score) {
-        super(participantID, participantName, participantState, score);
+    /**
+     * Constructor
+     *
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     */
+    public Sprinter(String participantID, String participantName, String participantState, int participantAge) {
+        super(participantID, participantName, participantState, participantAge);
     }
 
-    public static ArrayList<String[]> readSprinterdata() throws IOException {
+    /**
+     * Constructor
+     *
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     * @param score
+     */
+    public Sprinter(String participantID, String participantName, String participantState, int participantAge, String score) {
+        super(participantID, participantName, participantState, participantAge, score);
+    }
 
-        ArrayList<String[]> tempSp = readCSVdata.getCsvData();
+    /**
+     * Constructor
+     *
+     * @param participantID
+     * @param participantName
+     * @param participantState
+     * @param participantAge
+     * @param point
+     */
+    public Sprinter(String participantID, String participantName, String participantState, int participantAge, Integer point) {
+        super(participantID, participantName, participantState, participantAge, point);
+    }
+
+    /**
+     * data reader of sprinter athlete
+     * @throws IOException
+     */
+    public static void readSprinterdata() throws IOException {
+
+        ArrayList<String[]> tempSp = readCSVdata.getLineList();
 
         for (int i = 0; i < tempSp.size(); i++) {
             if (tempSp.get(i)[COLUMN_NUM - 1].equals("SPRINTER")) {
@@ -32,10 +74,15 @@ public class Sprinter extends Athlete{
                 sprinter.add(currCol);
             }
         }
-        return sprinter;
     }
 
-    public static ArrayList<String[]> getSprinter() {
+    /**
+     * getter and setter of ArrayList sprinter
+     * @return sprinter
+     * @throws IOException
+     */
+    public static ArrayList<String[]> getSprinter() throws IOException {
+        readSprinterdata();
         return sprinter;
     }
 
