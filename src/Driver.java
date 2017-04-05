@@ -2,6 +2,7 @@ import Game.Cycling;
 import Game.Games;
 import Game.Running;
 import Game.Swimming;
+import Participants.Official;
 
 import java.io.IOException;
 import java.util.*;
@@ -93,9 +94,11 @@ public class Driver {
     /**
      * startGame method which is responsible for game running and score calculate
      */
-    public void startGame() {
+    public void startGame() throws IOException {
 
         System.out.println("Game Started..... ");
+        System.out.println("The referee of this game is:");
+        getRandomOfficial();
         System.out.println("Here is the score of each athlete:");
         getAthleteScore().clear();
         getAthleteScore();
@@ -109,7 +112,12 @@ public class Driver {
             System.out.println(mapping.getKey() + ":    " + mapping.getValue());
         }
 
-        //Games.getAttendAthlete().get(athleteChoice - 1)[1].equals(scoreMap.get())
+        if(Games.getAttendAthlete().get(athleteChoice - 1)[1].equals(list.get(1)))
+        {
+            System.out.println("Congratulatio, your prediction is right!");
+        }else{
+            System.out.println("Sorry, maybe next time you could predit the right athletes :)");
+        }
     }
 
     public void displayAllResults() {
@@ -219,10 +227,12 @@ public class Driver {
 
 
     /**
-     * get a random official to
+     * get a random official to each game
+     * @throws IOException
      */
-    public void getRandomOfficial(){
-
+    public void getRandomOfficial() throws IOException {
+        int i= (int) (Math.random() * Official.getOfficial().size());
+        System.out.println(Official.getOfficial().get(i)[1]);
     }
 
 }
