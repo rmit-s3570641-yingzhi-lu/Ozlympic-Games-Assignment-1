@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.util.*;
 import java.util.Map.Entry;
 
+import static java.lang.Boolean.TRUE;
+
 /*
  * Driver Class
  *
@@ -65,6 +67,10 @@ public class Driver {
     }
 
 
+    /**
+     * get athlete score with different types
+     * @return
+     */
     public HashMap getAthleteScore() {
 
         String[] score = new String[Games.getAttendAthlete().size()];
@@ -111,17 +117,31 @@ public class Driver {
         for (HashMap.Entry<String, String> mapping : list) {
             System.out.println(mapping.getKey() + ":    " + mapping.getValue());
         }
-
-        if(Games.getAttendAthlete().get(athleteChoice - 1)[1].equals(list.get(1)))
-        {
-            System.out.println("Congratulatio, your prediction is right!");
-        }else{
+        // if to judge weather this is the topped athelete user predicted
+        if (list.get(0).getKey().equals(Games.getAttendAthlete().get(athleteChoice - 1)[1]) == TRUE) {
+            System.out.println("Congratulation, your prediction is right!");
+        } else {
             System.out.println("Sorry, maybe next time you could predit the right athletes :)");
         }
+
+
     }
 
-    public void displayAllResults() {
+    /**
+     *
+     * @throws IOException
+     */
+
+    public void displayAllResults() throws IOException {
         System.out.println("List below is all results:");
+        if(type.equals("swimming")){
+
+        }
+        System.out.println(getRandomOfficial());
+
+
+
+
     }
 
     public void displayAllPoints() {
@@ -129,7 +149,6 @@ public class Driver {
     }
 
     /**
-     * Created by Ningqi Lu
      * Show the athlete attending each game
      */
     public void showAthleteinSelectedGame() throws IOException {
@@ -157,12 +176,16 @@ public class Driver {
 
 
     /**
-     * Created by Jodie Lu
      * Predict winner of ecah game for user
      */
     public void predictWinner() {
-        System.out.println("Input the order number of Athlete to predict the winner:");
         //System.out.println(Games.attendAthlete.size());
+        if (Games.getAttendAthlete().size() == 0) {
+            System.out.println("You need to select the game first!");
+            return;
+        } else {
+            System.out.println("Input the order number of Athlete to predict the winner:");
+        }
 
         do {
             Scanner in = new Scanner(System.in);
@@ -189,7 +212,6 @@ public class Driver {
     }
 
     /**
-     * Created by Jodie Lu
      * the selection loop of game type
      */
 
@@ -228,11 +250,14 @@ public class Driver {
 
     /**
      * get a random official to each game
+     *
      * @throws IOException
      */
-    public void getRandomOfficial() throws IOException {
-        int i= (int) (Math.random() * Official.getOfficial().size());
-        System.out.println(Official.getOfficial().get(i)[1]);
+    public String getRandomOfficial() throws IOException {
+        int i = (int) (Math.random() * Official.getOfficial().size());
+        String s= new String(Official.getOfficial().get(i)[1]);
+        System.out.println(s);
+        return  s;
     }
 
 }
